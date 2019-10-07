@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -12,35 +13,71 @@
 	<![endif]-->
 </head>
 <body>
-	<h1>Compound Interest Calculator</h1>
+	<h1 class="header"> Compound Interest Calculator</h1>
+	<hr>
+	<div class="description">
+		<li>Determine how much your money can grow by using compound interest.</li>
+	</div>
+	<div class="calculator-wrap">
+		<div class="column1">
+			<div class="input1"> INPUT </div>
+			<div class="color1>"
+				<ul>
+					<li>
+						<div class="starting" label for="amount">Starting Amount</label>
+						</div>
+							<input type="number" name="amount" value="1000">
+					</li>
+					<li>
+						<label for="interest">Interest Rate (%)</label>
+						<p>
+							<input type="number" name="interest" value="2">
+						</p>
+					</li>
+					<li>
+						<label for="contribution">Annual Contribution</label>
+						<p>
+							<input type="number" name="contribution" value="0">
+						</p>
+					</li>
+					<li>
+						<label for="duration">Duration (Years)</label>
+						<p>
+							<input type="number" name="duration" value="10">
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="column2">
+			<section class="results">
+				<div class="results1">RESULTS</div>
+					<div class="result-data-group result-total">
+						<span class="result-label">Final amount after <strong class="duration-val">10</strong> years</span>
+						<strong class="result-val final-val">$1218.99</strong>
+					</div>
+					<div class="result-data-group result-starting">
+						<span class="result-legend"></span>
+						<span class="result-label">Starting Amount:</span>
+						<strong class="result-val starting-val">$1000</strong>
+					</div>
+					<div class="result-data-group result-contribution">
+						<span class="result-legend"></span>
+						<span class="result-label">Annual Contribution Total:</span>
+						<strong class="result-val contribution-val">$0.00</strong>
+					</div>
+					<div class="result-data-group result-return">
+						<span class="result-legend"></span>
+						<span class="result-label">Total Return:</span>
+						<strong class="result-val return-val">$0.00</strong>
+					</div>
+				</section>
+		</div>
+	</div>
+<button type="button" onclick="calculate()">Submit</button>
 
-	<form>
-		<ul>
-			<li>
-				<label for="amount">Starting Amount($)*:</label>
-				<input type="number" name="amount" value="1000">
-			</li>
-			<li>
-				<label for="interest">Interest Rate(%)*:</label>
-				<input type="number" name="interest" value="2">
-			</li>
-			<li>
-				<label for="contribution">Annual Contribution($):</label>
-				<input type="number" name="contribution" value="0">
-			</li>
-			<li>
-				<label for="duration">Duration(Years)*:</label>
-				<input type="number" name="duration" value="10">
-			</li>
-		</ul>
-		<button type="button" onclick="calculate()">Submit</button>
-	</form>
-	<section>
-		<h2>Results</h2>
-		<p>Starting amount: <strong class="starting-val">$1000</strong></p>
-		<p>Contribution total: <strong class="contribution-val">$0.00</strong></p>
-		<p>Final Amount in <strong class="duration-val">10</strong> years: <strong class="final-val">$1218.99</strong></p>
-	</section>
 	<script type="text/javascript" src="calculator.js"></script>
+
+
 </body>
 </html>
